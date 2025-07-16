@@ -1,0 +1,30 @@
+# Requisitos para la aplicación móvil Ergo SaniTas SpA
+# Análisis Biomecánico de Saltos
+
+# Framework principal para aplicaciones móviles
+kivy==2.1.0
+kivymd==1.1.1
+
+# Procesamiento de imágenes y visión por computadora
+opencv-python==4.8.1.78
+mediapipe==0.10.7
+numpy==1.24.3
+
+# Manejo de datos y configuración
+PyYAML==6.0.1
+Pillow==10.0.1
+
+# Logging y utilidades
+python-dateutil==2.8.2
+
+# Para empaquetado móvil (opcional)
+buildozer==1.5.0
+cython==0.29.36
+
+# Dependencias adicionales para Android
+pyjnius==1.4.2
+plyer==2.1.0
+
+# Para desarrollo y testing
+pytest==7.4.3
+pytest-cov==4.1.0
