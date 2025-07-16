@@ -1,0 +1,125 @@
+# Archivos específicos de Ergo SaniTas App
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Entorno virtual
+venv/
+env/
+ENV/
+
+# Archivos de configuración local
+.env
+.venv
+local_config.yaml
+
+# Logs
+*.log
+logs/
+ergosanitas_saltos_mejorado.log
+
+# Datos de usuario
+perfiles_usuarios.json
+perfil_usuario.json
+resultados_*.json
+data/profiles/
+data/results/
+data/sessions/
+
+# Buildozer
+.buildozer/
+bin/
+
+# Android
+*.apk
+*.aab
+*.keystore
+
+# iOS
+*.ipa
+*.mobileprovision
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Archivos de prueba
+test_*.py
+*_test.py
+tests/
+
+# Documentación generada
+docs/_build/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
