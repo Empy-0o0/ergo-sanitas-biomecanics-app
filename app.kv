@@ -1,0 +1,311 @@
+#:kivy 2.0.0
+
+# Estilos globales para la aplicación Ergo SaniTas
+<Label>:
+    text_size: self.size
+    halign: 'center'
+    valign: 'middle'
+
+<Button>:
+    font_size: '16sp'
+    bold: True
+
+<TextInput>:
+    font_size: '16sp'
+    multiline: False
+    padding: [10, 10]
+
+<Spinner>:
+    font_size: '16sp'
+
+# Pantalla de Login personalizada
+<LoginScreen>:
+    canvas.before:
+        Color:
+            rgba: 0.95, 0.95, 0.95, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+# Pantalla de Inicio personalizada
+<HomeScreen>:
+    canvas.before:
+        Color:
+            rgba: 0.95, 0.95, 0.95, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+# Pantalla de Análisis personalizada
+<JumpAnalysisScreen>:
+    canvas.before:
+        Color:
+            rgba: 0.9, 0.9, 0.9, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+# Pantalla de Resultados personalizada
+<ResultsScreen>:
+    canvas.before:
+        Color:
+            rgba: 0.95, 0.95, 0.95, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+# Widget personalizado para mostrar métricas
+<MetricWidget@BoxLayout>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: '80dp'
+    spacing: '5dp'
+    padding: ['10dp', '5dp']
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 0.9
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [10, 10, 10, 10]
+        Color:
+            rgba: 0.2, 0.4, 0.8, 1
+        Line:
+            rounded_rectangle: self.x, self.y, self.width, self.height, 10
+            width: 2
+
+# Widget personalizado para botones principales
+<MainButton@Button>:
+    size_hint_y: None
+    height: '60dp'
+    font_size: '18sp'
+    bold: True
+    canvas.before:
+        Color:
+            rgba: self.background_color if self.background_color else (0.2, 0.4, 0.8, 1)
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [15, 15, 15, 15]
+
+# Widget personalizado para información del usuario
+<UserInfoCard@BoxLayout>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: '120dp'
+    spacing: '5dp'
+    padding: ['15dp', '10dp']
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 0.95
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [15, 15, 15, 15]
+        Color:
+            rgba: 0.2, 0.4, 0.8, 0.3
+        Line:
+            rounded_rectangle: self.x, self.y, self.width, self.height, 15
+            width: 3
+
+# Widget personalizado para el área de la cámara
+<CameraArea@Widget>:
+    canvas.before:
+        Color:
+            rgba: 0.1, 0.1, 0.1, 1
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [10, 10, 10, 10]
+        Color:
+            rgba: 0.3, 0.3, 0.3, 1
+        Line:
+            rounded_rectangle: self.x, self.y, self.width, self.height, 10
+            width: 2
+            dash_offset: 5
+            dash_length: 10
+
+# Widget personalizado para feedback en tiempo real
+<FeedbackCard@BoxLayout>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: '100dp'
+    spacing: '5dp'
+    padding: ['10dp', '8dp']
+    
+    canvas.before:
+        Color:
+            rgba: 0.9, 0.95, 1, 0.9
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [10, 10, 10, 10]
+        Color:
+            rgba: 0.2, 0.6, 0.2, 1
+        Line:
+            rounded_rectangle: self.x, self.y, self.width, self.height, 10
+            width: 2
+
+# Widget personalizado para mostrar errores
+<ErrorCard@BoxLayout>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: '80dp'
+    spacing: '5dp'
+    padding: ['10dp', '8dp']
+    
+    canvas.before:
+        Color:
+            rgba: 1, 0.9, 0.9, 0.9
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [10, 10, 10, 10]
+        Color:
+            rgba: 0.8, 0.2, 0.2, 1
+        Line:
+            rounded_rectangle: self.x, self.y, self.width, self.height, 10
+            width: 2
+
+# Widget personalizado para recomendaciones
+<RecommendationCard@BoxLayout>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: '60dp'
+    spacing: '3dp'
+    padding: ['12dp', '8dp']
+    
+    canvas.before:
+        Color:
+            rgba: 0.95, 1, 0.9, 0.9
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [8, 8, 8, 8]
+        Color:
+            rgba: 0.2, 0.6, 0.2, 0.7
+        Line:
+            rounded_rectangle: self.x, self.y, self.width, self.height, 8
+            width: 1
+
+# Widget personalizado para barra de progreso
+<PowerBar@BoxLayout>:
+    orientation: 'vertical'
+    size_hint_x: None
+    width: '60dp'
+    spacing: '5dp'
+    padding: ['5dp', '10dp']
+    
+    canvas.before:
+        Color:
+            rgba: 0.2, 0.2, 0.2, 0.8
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [5, 5, 5, 5]
+
+# Estilo para títulos de sección
+<SectionTitle@Label>:
+    font_size: '20sp'
+    bold: True
+    color: 0.2, 0.4, 0.8, 1
+    size_hint_y: None
+    height: '40dp'
+
+# Estilo para subtítulos
+<SubTitle@Label>:
+    font_size: '16sp'
+    bold: True
+    color: 0.4, 0.4, 0.4, 1
+    size_hint_y: None
+    height: '30dp'
+
+# Estilo para texto informativo
+<InfoText@Label>:
+    font_size: '14sp'
+    color: 0.3, 0.3, 0.3, 1
+    text_size: self.size
+    halign: 'left'
+    valign: 'middle'
+
+# Estilo para campos de entrada
+<InputField@TextInput>:
+    size_hint_y: None
+    height: '40dp'
+    background_color: 1, 1, 1, 1
+    foreground_color: 0.2, 0.2, 0.2, 1
+    cursor_color: 0.2, 0.4, 0.8, 1
+    selection_color: 0.2, 0.4, 0.8, 0.3
+
+# Estilo para spinners/selectores
+<CustomSpinner@Spinner>:
+    size_hint_y: None
+    height: '40dp'
+    background_color: 1, 1, 1, 1
+    color: 0.2, 0.2, 0.2, 1
+
+# Botón de acción secundaria
+<SecondaryButton@Button>:
+    size_hint_y: None
+    height: '45dp'
+    font_size: '16sp'
+    background_color: 0.6, 0.6, 0.6, 1
+    color: 1, 1, 1, 1
+
+# Botón de peligro/cancelar
+<DangerButton@Button>:
+    size_hint_y: None
+    height: '45dp'
+    font_size: '16sp'
+    background_color: 0.8, 0.2, 0.2, 1
+    color: 1, 1, 1, 1
+
+# Botón de éxito/confirmar
+<SuccessButton@Button>:
+    size_hint_y: None
+    height: '45dp'
+    font_size: '16sp'
+    background_color: 0.2, 0.6, 0.2, 1
+    color: 1, 1, 1, 1
+
+# Separador visual
+<Separator@Widget>:
+    size_hint_y: None
+    height: '2dp'
+    canvas:
+        Color:
+            rgba: 0.8, 0.8, 0.8, 0.5
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+# Header de la aplicación
+<AppHeader@BoxLayout>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: '100dp'
+    spacing: '5dp'
+    padding: ['20dp', '15dp']
+    
+    canvas.before:
+        Color:
+            rgba: 0.2, 0.4, 0.8, 0.1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+# Footer de la aplicación
+<AppFooter@BoxLayout>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: '60dp'
+    padding: ['20dp', '10dp']
+    
+    canvas.before:
+        Color:
+            rgba: 0.9, 0.9, 0.9, 0.5
+        Rectangle:
+            pos: self.pos
+            size: self.size
